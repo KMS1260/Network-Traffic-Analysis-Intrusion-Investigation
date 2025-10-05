@@ -49,7 +49,7 @@ Our goal is to investigate, confirm the source and scope of the leak, and contai
 
 ---
 
-#Investigation
+# Investigation
 
 <details>
   <summary><strong>Analysing the pcap</strong></summary>
