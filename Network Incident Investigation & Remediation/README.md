@@ -48,10 +48,15 @@ Our goal is to investigate, confirm the source and scope of the leak, and contai
 6. [Conclusion & Remediation](#conclusion--remediation)
 
 ---
+<details>
+  <summary><strong>Investigation</strong></summary>
 
-## Investigation
+#
 
-### Analysing the pcap
+<details>
+  <summary><strong>Analysing the pcap</strong></summary>
+
+  #
 
 On the **Security Onion 2.4.10 VM**, on the desktop, there is a file called **traffic.pcap** containing network traffic logs we will open it with Wireshark by just double clicking on the file.
 
@@ -77,10 +82,15 @@ external IP addresses: 75.30.5.55
 
 we should note down that IP address
 
+</details>
 
-### Reviewing the target machine
+<details>
+  <summary><strong>Reviewing the target machine</strong></summary>
 
-**Displaying the IP address**
+#
+
+<details>
+  <summary>Displaying the IP address</summary>
 
 We will access the **windows server 2019 VM**. 
 
@@ -101,8 +111,10 @@ ipconfig
 We should notice that this machine’s IP is the same internal IP that was **sending sensitive** data to 75.30.5.55 
 
 Let's keep a note of the IP: **10.10.1.5** 
+</details>
 
-**Displaying the active connections**
+<details>
+  <summary>Displaying the active connections</summary>
 
 We now need to display the active connections and ports on which the computer is listening to and document any anomalous results  
 
@@ -115,8 +127,10 @@ netstat
 Again, we see the same external IP (75.30.5.55) this time also the **port (1337)** 
 
 It seems like the attack is occurring from Port 1337 we should note that.
+</details>
 
-**Checking for unauthorized accounts**
+<details>
+  <summary>Checking for unauthorized accounts</summary>
 
 We will now check for any unauthorised accounts and document any anomalous results  
 
@@ -124,15 +138,80 @@ To check for unauthorized accounts, we will enter net user in cmd
 ```cmd
 net user
 ```
-
 ![](./images/9.png)
 
-**Checking for anomalous processes**
+Right away we should notice a suspicious username (adm1nistrator) this means the malicious actor tried to disguise the name administrator by adding 1. 
+ 
+we should note the anomalous user account (adm1nistrator) 
 
+</details>
+
+<details>
+  <summary>Checking for anomalous processes</summary>
+
+We now need to review the running applications processes and services, then document any anomalous results. 
+
+We will enter tasklist /SVC in cmd to display current processes or applications that are running on the machine 
+```cmd
+tasklist /SVC
+```
 ![](./images/10.png)
+
+After reviewing all the processes and application one of them stood out which is **WinT0Ols.exe** this application is disguising itself as windows tool but tool is not spelled correctly. 
+
+Just to double check let’s check this process in process explorer which is Sysinternals tool
+
 ![](./images/11.jpg)
 
-### Knowledge Check
+We can see it has no description, and it’s not registered under the Microsoft corporation  
+
+Let's note down the name of this malicious application: **WinT0ols.exe** (PID 6692)
+ </details>
+ 
+</details>
+
+<details>
+  <summary><strong>Knowledge Check</strong></summary>
+
+#
+
+<details>
+  <summary><strong>1) On which packet number does the attack start?</strong></summary>
+
+<details><summary>28</summary>✅ Correct</details>
+<details><summary>62</summary>❌ Incorrect</details>
+<details><summary>75</summary>❌ Incorrect</details>
+<details><summary>103</summary>❌ Incorrect</details>
+</details>
+
+<details>
+  <summary><strong>2) What protocol is being used in the attack?</strong></summary>
+
+<details><summary>HTTP</summary>❌ Incorrect</details>
+<details><summary>SSHv2</summary>❌ Incorrect</details>
+<details><summary>ICMP</summary>❌ Incorrect</details>
+<details><summary>TCP</summary>✅ Correct</details>
+</details>
+
+<details>
+  <summary><strong>3) Which of the following is the attacker's IP address?</strong></summary>
+
+<details><summary>64.15.112.55</summary>❌ Incorrect</details>
+<details><summary>75.23.54.124</summary>❌ Incorrect</details>
+<details><summary>75.30.5.55</summary>✅ Correct</details>
+<details><summary>74.125.75.7</summary>❌ Incorrect</details>
+</details>
+
+<details>
+  <summary><strong>4) What is the destination port for the attacker's device?</strong></summary>
+
+<details><summary>49673</summary>❌ Incorrect</details>
+<details><summary>8080</summary>❌ Incorrect</details>
+<details><summary>443</summary>❌ Incorrect</details>
+<details><summary>1337</summary>✅ Correct</details>
+</details>
+</details>
+</details>
 
 ---
 
