@@ -49,14 +49,23 @@ Our goal is to investigate, confirm the source and scope of the leak, and contai
 
 ---
 
+## Investigation
 
+---
 
+## Log Analysis
 
+---
 
+## Incident Identification
 
+---
 
+## Mitigation
 
+---
 
+## Monitoring
 
 ---
 
