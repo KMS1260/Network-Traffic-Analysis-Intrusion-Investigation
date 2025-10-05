@@ -40,7 +40,7 @@ Our goal is to investigate, confirm the source and scope of the leak, and contai
 
 ## Table of Contents
 
-1. [Investigation](#investigation)
+1. [Investigation](investigation)
 2. [Log Analysis](#log-analysis)
 3. [Incident Identification](#incident-identification)
 4. [Mitigation](#mitigation)
