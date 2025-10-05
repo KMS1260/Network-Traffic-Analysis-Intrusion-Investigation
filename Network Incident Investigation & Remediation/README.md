@@ -51,12 +51,12 @@ Our goal is to investigate, confirm the source and scope of the leak, and contai
 
 ---
 
-# Network Incident Investigation — Conclusion & Remediation
+## Network Incident Investigation — Conclusion & Remediation
 
-## Executive Summary
+### Executive Summary
 Outbound data exfiltration was traced to a Windows Server 2019 host at **10.10.1.5**. The host established TCP sessions to **75.30.5.55** over **port 1337**, during which **personally identifiable information (PII)**—customer names, addresses, email addresses, phone numbers, and Social Security numbers—was transmitted in clear text. Host and network evidence indicate **spyware-style exfiltration** rather than a legitimate encrypted transfer.
 
-## Key Findings
+### Key Findings
 - **Source host:** 10.10.1.5 (Windows Server 2019)
 - **Destination:** 75.30.5.55:1337 (unapproved egress)
 - **Sensitive data:** PII (names, addresses, emails, phone numbers, SSNs) observed in clear text
@@ -64,13 +64,13 @@ Outbound data exfiltration was traced to a Windows Server 2019 host at **10.10.1
 - **Unauthorized account:** `Adm1nistrator` (created; Event ID **4720**)
 - **Business impact:** Customer data leakage associated with subsequent phishing/vishing complaints
 
-## Actions Taken & Current Status
+### Actions Taken & Current Status
 - Disabled the rogue local account **Adm1nistrator**.
 - Terminated the malicious process **WinT0Ols.exe** and removed known artifacts in the staging directory.
 - Implemented temporary egress blocks to **75.30.5.55** and validated **no further traffic** to the destination.
 - Current status: **Contained** (no active exfiltration observed).
 
-## Recommendations
+### Recommendations
 1. **Eradication & Hardening**
    - Reimage the affected server from a **known-good baseline**.
    - Rotate **all local and administrative credentials**.
@@ -98,7 +98,7 @@ Outbound data exfiltration was traced to a Windows Server 2019 host at **10.10.1
    - Brief staff on the incident and refresh **phishing/vishing awareness**.
    - Review and update **incident response runbooks** to reduce time‑to‑detect and time‑to‑contain.
 
-## Indicators of Compromise (IoCs)
+### Indicators of Compromise (IoCs)
 | Type | Value |
 |------|------|
 | Source Host | 10.10.1.5 |
