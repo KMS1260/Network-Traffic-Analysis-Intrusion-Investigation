@@ -582,22 +582,38 @@ If no packets are showing it means that the malicious packets transmissions have
 
 ## Conclusion & Remediation
 
-### Executive Summary
-Outbound data exfiltration was traced to a Windows Server 2019 host at **10.10.1.5**. The host established TCP sessions to **75.30.5.55** over **port 1337**, during which **personally identifiable information (PII)**—customer names, addresses, email addresses, phone numbers, and Social Security numbers—was transmitted in clear text. Host and network evidence indicate **spyware-style exfiltration** rather than a legitimate encrypted transfer.
+<details>
+  <summary><strong>Executive Summary</strong></summary>
 
-### Key Findings
+#
+
+Outbound data exfiltration was traced to a Windows Server 2019 host at **10.10.1.5**. The host established TCP sessions to **75.30.5.55** over **port 1337**, during which **personally identifiable information (PII)**—customer names, addresses, email addresses, phone numbers, and Social Security numbers—was transmitted in clear text. Host and network evidence indicate **spyware-style exfiltration** rather than a legitimate encrypted transfer.
+</details>
+
+<details>
+  <summary><strong>Key Findings</strong></summary>
+
+#
+
 - **Source host:** 10.10.1.5 (Windows Server 2019)
 - **Destination:** 75.30.5.55:1337 (unapproved egress)
 - **Sensitive data:** PII (names, addresses, emails, phone numbers, SSNs) observed in clear text
 - **Malicious process:** `WinT0Ols.exe` (PID **6692**), executed from `C:\\Users\\admin\\Downloads\\dist`
 - **Unauthorized account:** `Adm1nistrator` (created; Event ID **4720**)
 - **Business impact:** Customer data leakage associated with subsequent phishing/vishing complaints
+</details>
 
-### Actions Taken & Current Status
+<details>
+  <summary><strong>Actions Taken & Current Status</strong></summary>
+
+#
+  
 - Disabled the rogue local account **Adm1nistrator**.
 - Terminated the malicious process **WinT0Ols.exe** and removed known artifacts in the staging directory.
 - Implemented temporary egress blocks to **75.30.5.55** and validated **no further traffic** to the destination.
 - Current status: **Contained** (no active exfiltration observed).
+  
+</details>
 
 <details>
   <summary><strong>Recommendations</strong></summary>
