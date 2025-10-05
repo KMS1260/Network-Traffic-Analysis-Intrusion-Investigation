@@ -50,9 +50,9 @@ Our goal is to investigate, confirm the source and scope of the leak, and contai
 ---
 
 <details>
-  <summary><strong>#Investigation</strong></summary>
+  <summary><strong></strong></summary>
 
-#
+#Investigation
 
 <details>
   <summary><strong>Analysing the pcap</strong></summary>
@@ -212,7 +212,7 @@ Let's note down the name of this malicious application: **WinT0ols.exe** (PID 66
 <details><summary>1337</summary>✅ Correct</details>
 </details>
 </details>
-</details>
+
 
 ---
 
