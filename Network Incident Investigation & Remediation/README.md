@@ -38,6 +38,15 @@ Our goal is to investigate, confirm the source and scope of the leak, and contai
 - **Apply security principles to the environment.** We align infrastructure with least privilege, defense in depth, and secure configuration baselines.
 </details>
 
+## Table of Contents
+
+1. [Investigation](#investigation)
+2. [Log Analysis](#log_analysis)
+3. [Incident Identification](#incident-identification)
+4. [Mitigation](#mitigation)
+5. [Monitoring](#monitoring)
+6. [Conclusion & Remediation](#netowrk-incident-investigation-conclusion-&-remediation)
+
 ---
 
 
