@@ -45,7 +45,7 @@ Our goal is to investigate, confirm the source and scope of the leak, and contai
 3. [Incident Identification](#incident-identification)
 4. [Mitigation](#mitigation)
 5. [Monitoring](#monitoring)
-6. [Conclusion & Remediation](#netowrk-incident-investigation-conclusion-&-remediation)
+6. [Conclusion & Remediation](#netowrk-incident-investigation-conclusion-remediation)
 
 ---
 
