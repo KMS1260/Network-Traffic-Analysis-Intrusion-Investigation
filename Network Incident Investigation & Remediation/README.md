@@ -51,21 +51,55 @@ Our goal is to investigate, confirm the source and scope of the leak, and contai
 
 ## Investigation
 
+### Analysing the pcap
+
+![](./images/0.jpg)
+![](./images/1.jpg)
+![](./images/2.jpg)
+![](./images/3.jpg)
+![](./images/4.jpg)
+
+### Reviewing the target machine
+
+
+
+### Knowledge Check
+
 ---
 
 ## Log Analysis
+
+### Analysing the Windows Event Viewer for user-creation events
+
+### Comparing your results to the pcap
+
+### Knowledge Check
 
 ---
 
 ## Incident Identification
 
+### Reviewing the target machine's findings
+
+### Knowledge Check
+
 ---
 
 ## Mitigation
 
+### Mitigating the unauthorized user account
+
+### Mitigating the malicious application
+
+### Knowledge Check
+
 ---
 
 ## Monitoring
+
+### Verifying the malicious application was terminated.
+
+### Verifying the malicious packets transmissions has been terminated.
 
 ---
 
@@ -129,10 +163,7 @@ Outbound data exfiltration was traced to a Windows Server 2019 host at **10.10.1
 
 ---
 
-![](./images/1.jpg)
-![](./images/2.jpg)
-![](./images/3.jpg)
-![](./images/4.jpg)
+
 ![](./images/5.jpg)
 ![](./images/6.png)
 ![](./images/7.jpg)
