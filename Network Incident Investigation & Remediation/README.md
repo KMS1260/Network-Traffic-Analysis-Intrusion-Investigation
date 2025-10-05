@@ -61,7 +61,24 @@ Our goal is to investigate, confirm the source and scope of the leak, and contai
 
 ### Reviewing the target machine
 
+**Displaying the IP address**
 
+![](./images/5.jpg)
+![](./images/6.png)
+![](./images/7.jpg)
+
+**Displaying the active connections**
+
+![](./images/8.jpg)
+
+**Checking for unauthorized accounts**
+
+![](./images/9.png)
+
+**Checking for anomalous processes**
+
+![](./images/10.png)
+![](./images/11.jpg)
 
 ### Knowledge Check
 
@@ -71,7 +88,24 @@ Our goal is to investigate, confirm the source and scope of the leak, and contai
 
 ### Analysing the Windows Event Viewer for user-creation events
 
+![](./images/12.png)
+![](./images/13.jpg)
+![](./images/14.jpg)
+![](./images/15.png)
+![](./images/16.png)
+![](./images/17.jpg)
+![](./images/18.jpg)
+
 ### Comparing your results to the pcap
+
+![](./images/19.jpg)
+![](./images/20.jpg)
+![](./images/21.png)
+![](./images/22.png)
+![](./images/23.png)
+![](./images/24.jpg)
+![](./images/25.jpg)
+![](./images/26.jpg)
 
 ### Knowledge Check
 
@@ -81,6 +115,13 @@ Our goal is to investigate, confirm the source and scope of the leak, and contai
 
 ### Reviewing the target machine's findings
 
+![](./images/22.png)
+![](./images/27.jpg)
+![](./images/28.jpg)
+![](./images/29.jpg)
+![](./images/30.jpg)
+![](./images/31.jpg)
+
 ### Knowledge Check
 
 ---
@@ -89,7 +130,15 @@ Our goal is to investigate, confirm the source and scope of the leak, and contai
 
 ### Mitigating the unauthorized user account
 
+![](./images/32.jpg)
+![](./images/33.png)
+![](./images/34.png)
+![](./images/35.jpg)
+![](./images/36.jpg)
+
 ### Mitigating the malicious application
+
+![](./images/37.jpg)
 
 ### Knowledge Check
 
@@ -99,7 +148,16 @@ Our goal is to investigate, confirm the source and scope of the leak, and contai
 
 ### Verifying the malicious application was terminated.
 
+![](./images/38.jpg)
+![](./images/39.jpg)
+
 ### Verifying the malicious packets transmissions has been terminated.
+
+![](./images/40.jpg)
+![](./images/41.jpg)
+![](./images/42.png)
+![](./images/43.jpg)
+![](./images/44.png)
 
 ---
 
@@ -161,46 +219,3 @@ Outbound data exfiltration was traced to a Windows Server 2019 host at **10.10.1
 | Unauthorized Account | `Adm1nistrator` |
 | Windows Event | 4720 (Account Created) |
 
----
-
-
-![](./images/5.jpg)
-![](./images/6.png)
-![](./images/7.jpg)
-![](./images/8.jpg)
-![](./images/9.png)
-![](./images/10.png)
-![](./images/11.jpg)
-![](./images/12.png)
-![](./images/13.jpg)
-![](./images/14.jpg)
-![](./images/15.png)
-![](./images/16.png)
-![](./images/17.jpg)
-![](./images/18.jpg)
-![](./images/19.jpg)
-![](./images/20.jpg)
-![](./images/21.png)
-![](./images/22.png)
-![](./images/23.png)
-![](./images/24.jpg)
-![](./images/25.jpg)
-![](./images/26.jpg)
-![](./images/27.jpg)
-![](./images/28.jpg)
-![](./images/29.jpg)
-![](./images/30.jpg)
-![](./images/31.jpg)
-![](./images/32.jpg)
-![](./images/33.png)
-![](./images/34.png)
-![](./images/35.jpg)
-![](./images/36.jpg)
-![](./images/37.jpg)
-![](./images/38.jpg)
-![](./images/39.jpg)
-![](./images/40.jpg)
-![](./images/41.jpg)
-![](./images/42.png)
-![](./images/43.jpg)
-![](./images/44.png)
