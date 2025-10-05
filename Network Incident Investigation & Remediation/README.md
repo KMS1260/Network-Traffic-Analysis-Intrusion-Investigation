@@ -45,7 +45,7 @@ Our goal is to investigate, confirm the source and scope of the leak, and contai
 3. [Incident Identification](#incident-identification)
 4. [Mitigation](#mitigation)
 5. [Monitoring](#monitoring)
-6. [Conclusion & Remediation](#conclusion-remediation)
+6. [Conclusion & Remediation](#conclusion--remediation)
 
 ---
 
@@ -128,3 +128,49 @@ Outbound data exfiltration was traced to a Windows Server 2019 host at **10.10.1
 | Windows Event | 4720 (Account Created) |
 
 ---
+
+/images/0.jpg
+/images/1.jpg
+/images/2.jpg
+/images/3.jpg
+/images/4.jpg
+/images/5.jpg
+/images/6.png
+/images/7.jpg
+/images/8.jpg
+/images/9.png
+/images/10.png
+/images/11.jpg
+/images/12.png
+/images/13.jpg
+/images/14.jpg
+/images/15.png
+/images/16.png
+/images/17.jpg
+/images/18.jpg
+/images/19.jpg
+/images/20.jpg
+/images/21.png
+/images/22.png
+/images/23.png
+/images/24.jpg
+/images/25.jpg
+/images/26.jpg
+/images/27.jpg
+/images/28.jpg
+/images/29.jpg
+/images/30.jpg
+/images/31.jpg
+/images/32.jpg
+/images/33.png
+/images/34.png
+/images/35.jpg
+/images/36.jpg
+/images/37.jpg
+/images/38.jpg
+/images/39.jpg
+/images/40.jpg
+/images/41.jpg
+/images/42.png
+/images/43.jpg
+/images/44.png
