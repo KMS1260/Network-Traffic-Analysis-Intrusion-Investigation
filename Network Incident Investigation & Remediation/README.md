@@ -45,7 +45,7 @@ Our goal is to investigate, confirm the source and scope of the leak, and contai
 3. [Incident Identification](#incident-identification)
 4. [Mitigation](#mitigation)
 5. [Monitoring](#monitoring)
-6. [Conclusion & Remediation](#netowrk-incident-investigation-conclusion-remediation)
+6. [Conclusion & Remediation](#nconclusion-remediation)
 
 ---
 
@@ -69,7 +69,7 @@ Our goal is to investigate, confirm the source and scope of the leak, and contai
 
 ---
 
-## Network Incident Investigation — Conclusion Remediation
+## Conclusion & Remediation
 
 ### Executive Summary
 Outbound data exfiltration was traced to a Windows Server 2019 host at **10.10.1.5**. The host established TCP sessions to **75.30.5.55** over **port 1337**, during which **personally identifiable information (PII)**—customer names, addresses, email addresses, phone numbers, and Social Security numbers—was transmitted in clear text. Host and network evidence indicate **spyware-style exfiltration** rather than a legitimate encrypted transfer.
