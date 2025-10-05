@@ -53,25 +53,77 @@ Our goal is to investigate, confirm the source and scope of the leak, and contai
 
 ### Analysing the pcap
 
+On the **Security Onion 2.4.10 VM**, on the desktop, there is a file called **traffic.pcap** containing network traffic logs we will open it with Wireshark by just double clicking on the file.
+
 ![](./images/0.jpg)
+
+Once Wireshark opens, we will examine the packet list panel looking at the source and **destination** we will be focusing more on the destination ignoring internal traffic 
+
 ![](./images/1.jpg)
+
+After examining all the packets, we find one external IP address which is sending data, and we can see that it’s using **PSH flag**. 
+
 ![](./images/2.jpg)
+
+after looking at more traffic to the destination of **75.30.5.55** we come across what looks like sensitive date being sent from **internal IP** (**10.10.1.5**) to the **external IP** (**75.30.5.55**)
+
 ![](./images/3.jpg)
+
+type of information: names, email address, ... 
+
+external IP addresses: 75.30.5.55 
+
 ![](./images/4.jpg)
+
+we should note down that IP address
+
 
 ### Reviewing the target machine
 
 **Displaying the IP address**
 
+We will access the **windows server 2019 VM**. 
+
 ![](./images/5.jpg)
+
+We will need to display and document the IPv4 address of the windows server. 
+
+We will use Command prompt(cmd), which should be run as an administrator.
+
 ![](./images/6.png)
+
+When the cmd window opens we will enter:
+```cmd
+ipconfig
+```  
 ![](./images/7.jpg)
+
+We should notice that this machine’s IP is the same internal IP that was **sending sensitive** data to 75.30.5.55 
+
+Let's keep a note of the IP: **10.10.1.5** 
 
 **Displaying the active connections**
 
+We now need to display the active connections and ports on which the computer is listening to and document any anomalous results  
+
+To check active connections and ports we will use cmd again and enter: 
+```cmd
+netstat 
+```
 ![](./images/8.jpg)
 
+Again, we see the same external IP (75.30.5.55) this time also the **port (1337)** 
+
+It seems like the attack is occurring from Port 1337 we should note that.
+
 **Checking for unauthorized accounts**
+
+We will now check for any unauthorised accounts and document any anomalous results  
+
+To check for unauthorized accounts, we will enter net user in cmd
+```cmd
+net user
+```
 
 ![](./images/9.png)
 
