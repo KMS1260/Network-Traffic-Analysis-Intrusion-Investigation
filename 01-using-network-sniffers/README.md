@@ -3,15 +3,15 @@
 In this lab, we will learn about network sniffing and packet capture. First, we will use Wireshark to capture traffic. Next, we will use Wireshark's display filters to locate specific packets within a capture. Finally, we will use Wireshark's follow stream function to look at the packets composing a TCP and HTTP conversation. 
 
 ## Understand the Environment
-- We work from a **KALI** VM (Kali Linux). Wireshark is launched from the Kali menu and captures on the **eth0** interface. Firefox is used to generate traffic to target sites. :contentReference[oaicite:0]{index=0}  
-- Wireshark presents a **three-pane view** (Packet List / Packet Details / Packet Bytes). Frames are Ethernet (L2); packets are IP (L3); TCP segments and UDP datagrams sit at L4. :contentReference[oaicite:1]{index=1}  
-- Example lab context: Kali’s IPv4 is **10.1.16.66**; we capture, then filter to find HTTP/DNS traffic and specific conversations. :contentReference[oaicite:2]{index=2}
+- We work from a **KALI** VM (Kali Linux). Wireshark is launched from the Kali menu and captures on the **eth0** interface. Firefox is used to generate traffic to target sites. 
+- Wireshark presents a **three-pane view** (Packet List / Packet Details / Packet Bytes). Frames are Ethernet (L2); packets are IP (L3); TCP segments and UDP datagrams sit at L4. 
+- Example lab context: Kali’s IPv4 is **10.1.16.66**; we capture, then filter to find HTTP/DNS traffic and specific conversations. 
 
 ## Objectives
-- **Use data sources to support an investigation:** capture packets, correlate with protocol details, and extract evidence (e.g., HTTP requests, DNS lookups). :contentReference[oaicite:3]{index=3}  
-- **Apply Wireshark effectively:** start/stop captures, use **display filters** (e.g., `http`, `dns`, `ip.dst==10.1.16.66`, `ip.ttl<128`, `ip.addr!=10.1.16.66`, `tcp.flags.fin==1`), and understand AND/OR logic. :contentReference[oaicite:4]{index=4}  
-- **Follow streams:** use **Follow TCP/HTTP Stream** to view ordered conversations and plaintext payloads (when not TLS-encrypted). :contentReference[oaicite:5]{index=5}  
-- **Interpret results:** identify sources/destinations, protocols, and flags; answer targeted questions from the capture (“what/where/how”). :contentReference[oaicite:6]{index=6}
+- **Use data sources to support an investigation:** capture packets, correlate with protocol details, and extract evidence (e.g., HTTP requests, DNS lookups).
+- **Apply Wireshark effectively:** start/stop captures, use **display filters** (e.g., `http`, `dns`, `ip.dst==10.1.16.66`, `ip.ttl<128`, `ip.addr!=10.1.16.66`, `tcp.flags.fin==1`), and understand AND/OR logic.  
+- **Follow streams:** use **Follow TCP/HTTP Stream** to view ordered conversations and plaintext payloads (when not TLS-encrypted).
+- **Interpret results:** identify sources/destinations, protocols, and flags; answer targeted questions from the capture (“what/where/how”). 
 
 ## Table of Contents
 
@@ -483,7 +483,7 @@ In the Find: field at the bottom of the Follow HTTP Stream window, we will enter
 ```
 ![](./images/67.jpg)
 
-If the result does not match the HTML code of: <h1>Welcome to Damn Vulnerable Web Application!</h1>, then select Find Next again. 
+If the result does not match the HTML code of: (<h1>Welcome to Damn Vulnerable Web Application!</h1>), then select Find Next again. 
 
 <details>
   <summary><strong>What colour and from which side of the conversation is the HTML line <code>&lt;h1&gt;Welcome to Damn Vulnerable Web Application!&lt;/h1&gt;</code>?</strong> (Select all that apply)</summary>
@@ -504,7 +504,9 @@ The ability to use Follow HTTP Stream is limited using encrypted HTTPS communica
 
 ---
 
-## quiz 
+## Quiz 
+
+
 
 
 
