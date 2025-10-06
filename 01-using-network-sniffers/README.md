@@ -474,22 +474,24 @@ The Follow HTTP Stream window opens.
 This display is similar to that of the Follow TCP Stream window. However, the compressed and/or encoded HTTP payload is now visible in ASCII/plaintext. 
 
 We will attempt to locate in the HTTP Stream the segment from the web server which contains the HTML line of: 
-
+```text
 <h1>Welcome to Damn Vulnerable Web Application!</h1>
- 
+```
 In the Find: field at the bottom of the Follow HTTP Stream window, we will enter **<h1>Welcome**, then select **Find Next**. 
 ```text
 <h1>Welcome
 ```
 ![](./images/67.jpg)
 
-If the result does not match the HTML code of: Welcome to Damn Vulnerable Web Application!, then select Find Next again. 
+If the result does not match the HTML code of: 
+```text
+<h1>Welcome to Damn Vulnerable Web Application!</h1>
+```
+, then select Find Next again. 
 
 <details>
-  <summary><strong>What colour and from which side of the conversation is the HTML line <code>&lt;h1&gt;Welcome to Damn Vulnerable Web Application!&lt;/h1&gt;</code>?</strong> (Select all that apply)</summary>
+  <summary><strong>What colour and from which side of the conversation is the HTML line //<h1>Welcome to Damn Vulnerable Web Application!</h1> </strong> (Select all that apply)</summary>
   
----
-
 <details><summary>client</summary>❌ Incorrect</details>
 <details><summary>server</summary>✅ Correct</details>
 <details><summary>red</summary>❌ Incorrect</details>
