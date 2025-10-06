@@ -475,7 +475,7 @@ This display is similar to that of the Follow TCP Stream window. However, the co
 
 We will attempt to locate in the HTTP Stream the segment from the web server which contains the HTML line of: 
 
-<h1>Welcome to Damn Vulnerable Web Application!</h1> 
+<h1>Welcome to Damn Vulnerable Web Application!</h1>
  
 In the Find: field at the bottom of the Follow HTTP Stream window, we will enter **<h1>Welcome**, then select **Find Next**. 
 ```text
@@ -483,7 +483,7 @@ In the Find: field at the bottom of the Follow HTTP Stream window, we will enter
 ```
 ![](./images/67.jpg)
 
-If the result does not match the HTML code of: (<h1>Welcome to Damn Vulnerable Web Application!</h1>), then select Find Next again. 
+If the result does not match the HTML code of: Welcome to Damn Vulnerable Web Application!, then select Find Next again. 
 
 <details>
   <summary><strong>What colour and from which side of the conversation is the HTML line <code>&lt;h1&gt;Welcome to Damn Vulnerable Web Application!&lt;/h1&gt;</code>?</strong> (Select all that apply)</summary>
