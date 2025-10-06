@@ -473,25 +473,21 @@ The Follow HTTP Stream window opens.
 
 This display is similar to that of the Follow TCP Stream window. However, the compressed and/or encoded HTTP payload is now visible in ASCII/plaintext. 
 
-We will attempt to locate in the HTTP Stream the segment from the web server which contains the HTML line of: 
-```text
-<h1>Welcome to Damn Vulnerable Web Application!</h1>
-```
-In the Find: field at the bottom of the Follow HTTP Stream window, we will enter **<h1>Welcome**, then select **Find Next**. 
+We will attempt to locate in the HTTP Stream the segment from the web server which contains the HTML line of:  **<code>&lt;h1&gt;Welcome to Damn Vulnerable Web Application!&lt;/h1&gt;</code>**
+
+In the Find: field at the bottom of the Follow HTTP Stream window, we will enter **<code>&lt;h1&gt;Welcome&lt;/h1&gt;</code>**, then select **Find Next**. 
 ```text
 <h1>Welcome
 ```
 ![](./images/67.jpg)
 
-If the result does not match the HTML code of: 
-```text
-<h1>Welcome to Damn Vulnerable Web Application!</h1>
-```
-, then select Find Next again. 
+If the result does not match the HTML code of:  **<code>&lt;h1&gt;Welcome to Damn Vulnerable Web Application!&lt;/h1&gt;</code>**, then select Find Next again. 
 
 <details>
-  <summary><strong>What colour and from which side of the conversation is the HTML line //<h1>Welcome to Damn Vulnerable Web Application!</h1> </strong> (Select all that apply)</summary>
-  
+  <summary><strong>What colour and from which side of the conversation is the HTML line <code>&lt;h1&gt;Welcome to Damn Vulnerable Web Application!&lt;/h1&gt;</code>?</strong> (Select all that apply)</summary>
+
+#
+
 <details><summary>client</summary>❌ Incorrect</details>
 <details><summary>server</summary>✅ Correct</details>
 <details><summary>red</summary>❌ Incorrect</details>
@@ -508,6 +504,52 @@ The ability to use Follow HTTP Stream is limited using encrypted HTTPS communica
 
 ## Quiz 
 
+<details>
+  <summary><strong>1) What is the proper term for the network communication container at the Data Link Layer (Layer 2)?</strong></summary>
+
+<details><summary>Datagram</summary>❌ Incorrect</details>
+<details><summary>Segment</summary>❌ Incorrect</details>
+<details><summary>Packet</summary>❌ Incorrect</details>
+<details><summary>Protocol data unit</summary>❌ Too generic</details>
+<details><summary>Frame</summary>✅ Correct</details>
+</details>
+
+<details>
+  <summary><strong>2) Which pane of the Wireshark interface can be used to view the contents of a packet's payload in both HEX and ASCII?</strong></summary>
+
+<details><summary>Packet List</summary>❌ Incorrect</details>
+<details><summary>Packet Data</summary>✅ Correct</details>
+<details><summary>Packet Stream</summary>❌ Incorrect</details>
+<details><summary>Packet Details</summary>❌ Incorrect</details>
+</details>
+
+<details>
+  <summary><strong>3) What display filter comparison operator is used to express that two values are not the same?</strong></summary>
+
+<details><summary>!=</summary>✅ Correct</details>
+<details><summary>/=</summary>❌ Incorrect</details>
+<details><summary>==</summary>❌ Incorrect</details>
+<details><summary>&lt;&gt;</summary>❌ Incorrect</details>
+<details><summary>x=</summary>❌ Incorrect</details>
+</details>
+
+<details>
+  <summary><strong>4) Which of the following statements is true?</strong></summary>
+
+<details><summary>Display filters limit the packets accepted into the capture buffer.</summary>❌ Incorrect</details>
+<details><summary>Capture filters are used to highlight specific frames already present in the capture buffer.</summary>❌ Incorrect</details>
+<details><summary>Capture filters and display filters are defined in the same location within Wireshark.</summary>❌ Incorrect</details>
+<details><summary>Display filters are used to find packets matching specific values from a capture buffer.</summary>✅ Correct</details>
+</details>
+
+<details>
+  <summary><strong>5) What is the primary factor that determines what header or payload information can be viewed through a network sniffer?</strong></summary>
+
+<details><summary>Use of switches or routers</summary>❌ Not primary</details>
+<details><summary>IPv4 vs IPv6</summary>❌ Not primary</details>
+<details><summary>Encryption</summary>✅ Correct</details>
+<details><summary>Wired vs wireless</summary>❌ Not primary</details>
+</details>
 
 
 
