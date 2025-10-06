@@ -506,6 +506,8 @@ The ability to use Follow HTTP Stream is limited using encrypted HTTPS communica
 
 <details>
   <summary><strong>1) What is the proper term for the network communication container at the Data Link Layer (Layer 2)?</strong></summary>
+ 
+##
 
 <details><summary>Datagram</summary>❌ Incorrect</details>
 <details><summary>Segment</summary>❌ Incorrect</details>
@@ -514,8 +516,12 @@ The ability to use Follow HTTP Stream is limited using encrypted HTTPS communica
 <details><summary>Frame</summary>✅ Correct</details>
 </details>
 
+---
+
 <details>
   <summary><strong>2) Which pane of the Wireshark interface can be used to view the contents of a packet's payload in both HEX and ASCII?</strong></summary>
+ 
+##
 
 <details><summary>Packet List</summary>❌ Incorrect</details>
 <details><summary>Packet Data</summary>✅ Correct</details>
@@ -523,8 +529,12 @@ The ability to use Follow HTTP Stream is limited using encrypted HTTPS communica
 <details><summary>Packet Details</summary>❌ Incorrect</details>
 </details>
 
+---
+
 <details>
   <summary><strong>3) What display filter comparison operator is used to express that two values are not the same?</strong></summary>
+ 
+##
 
 <details><summary>!=</summary>✅ Correct</details>
 <details><summary>/=</summary>❌ Incorrect</details>
@@ -533,8 +543,12 @@ The ability to use Follow HTTP Stream is limited using encrypted HTTPS communica
 <details><summary>x=</summary>❌ Incorrect</details>
 </details>
 
+---
+
 <details>
   <summary><strong>4) Which of the following statements is true?</strong></summary>
+ 
+##
 
 <details><summary>Display filters limit the packets accepted into the capture buffer.</summary>❌ Incorrect</details>
 <details><summary>Capture filters are used to highlight specific frames already present in the capture buffer.</summary>❌ Incorrect</details>
@@ -542,18 +556,18 @@ The ability to use Follow HTTP Stream is limited using encrypted HTTPS communica
 <details><summary>Display filters are used to find packets matching specific values from a capture buffer.</summary>✅ Correct</details>
 </details>
 
+---
+
 <details>
   <summary><strong>5) What is the primary factor that determines what header or payload information can be viewed through a network sniffer?</strong></summary>
+ 
+##
 
 <details><summary>Use of switches or routers</summary>❌ Not primary</details>
 <details><summary>IPv4 vs IPv6</summary>❌ Not primary</details>
 <details><summary>Encryption</summary>✅ Correct</details>
 <details><summary>Wired vs wireless</summary>❌ Not primary</details>
 </details>
-
-
-
-
 
 ---
 
