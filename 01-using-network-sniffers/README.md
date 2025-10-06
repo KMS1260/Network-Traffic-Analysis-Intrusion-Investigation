@@ -2,7 +2,7 @@
 
 In this lab, we will learn about network sniffing and packet capture. First, we will use Wireshark to capture traffic. Next, we will use Wireshark's display filters to locate specific packets within a capture. Finally, we will use Wireshark's follow stream function to look at the packets composing a TCP and HTTP conversation. 
 
-## Understand the Environment
+## Understand the environment
 - We work from a **KALI** VM (Kali Linux). Wireshark is launched from the Kali menu and captures on the **eth0** interface. Firefox is used to generate traffic to target sites. 
 - Wireshark presents a **three-pane view** (Packet List / Packet Details / Packet Bytes). Frames are Ethernet (L2); packets are IP (L3); TCP segments and UDP datagrams sit at L4. 
 - Example lab context: Kali’s IPv4 is **10.1.16.66**; we capture, then filter to find HTTP/DNS traffic and specific conversations. 
