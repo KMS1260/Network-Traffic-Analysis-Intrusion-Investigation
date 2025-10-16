@@ -30,7 +30,7 @@ Connect to the KALI virtual machine and sign in as **root**.
 
 ![](./images/0.png)
 
-To launch Wireshark, we select the Kali **Applications** icon. It is a blue square with a white stylized dragon, located to the far left on the Kali top taskbar. 
+To launch Wireshark, we select the Kali **Applications** icon. It is a blue square with a white stylised dragon, located to the far left on the Kali top taskbar. 
 
 ![](./images/1.png)
 
@@ -48,7 +48,7 @@ The Wireshark application should be displayed as the only result. Select **Wires
 
 ![](./images/4.png)
 
-We will maximize the Wireshark window and initiate network frame collection on the eth0 interface.
+We will maximise the Wireshark window and initiate network frame collection on the eth0 interface.
 
 ![](./images/5.png)
 
@@ -92,7 +92,7 @@ To examine the packets, we will select the first packet from the capture in the 
 
 By selecting a captured frame from the top window of Wireshark (i.e., the Packet List pane in the default layout), the middle (i.e., the Packet Details pane in the default layout) and bottom (i.e., the Packet Bytes pane in the default layout) windows are focused on that single frame. We notice the middle window allows us to expand and explore the headers of all the protocols involved in this frame. For example, this could include Ethernet, IPv4, TCP, and HTTP. We also notice the bottom window is a hexadecimal presentation of the raw data of the frame and an American Standard Code for Information Interchange (ASCII) interpretation of that data. 
 
-The middle pane, known as "Packet Details," in Wireshark, is used to expand and look at the header values of the captured frames. Any header element that is captured in plaintext can be reviewed here. Wireshark will add relative and relevant information to the header data. Any such added information will be contained in **square brackets**. For example, [Stream Index: 2] indicates that the selected frame is part of the second stream contained in the current capture. Such added data is not directly contained in the captured frames. Wireshark will also perform interpretations or provide details to help explain the values in header fields. These interpretations or explanations are contained in **parentheses**. For example: Flags: 0x012 (SYN, ACK), which is an explanation that the hex flag value of 0x012 represents the flags of synchronization and acknowledgment. Such interpretations help to clarify the meaning or purpose of the values contained in the captured frame. 
+The middle pane, known as "Packet Details," in Wireshark, is used to expand and look at the header values of the captured frames. Any header element that is captured in plaintext can be reviewed here. Wireshark will add relative and relevant information to the header data. Any such added information will be contained in **square brackets**. For example, [Stream Index: 2] indicates that the selected frame is part of the second stream contained in the current capture. Such added data is not directly contained in the captured frames. Wireshark will also perform interpretations or provide details to help explain the values in header fields. These interpretations or explanations are contained in **parentheses**. For example: Flags: 0x012 (SYN, ACK), which is an explanation that the hex flag value of 0x012 represents the flags of synchronisation and acknowledgment. Such interpretations help to clarify the meaning or purpose of the values contained in the captured frame. 
 
 We will use Wireshark to examine the captured frames and use a simple display filter to display the **HTTP** traffic collected and attempt to locate the initial request from Kali to www.targetwebsite.com. The Kali virtual machine is using the IPv4 address of (**10.1.16.66**). 
 
@@ -131,7 +131,7 @@ Notice the bottom window is a hexadecimal presentation of the raw data of the fr
 
 ![](./images/19.jpg)
 
-If we look in the ASCII interpretation to see if we can recognize the URL requested. We should be able to find **www.targetwebsite.com** in the 6th-7th line (those hex offsets labelled as 0040 - 0070), but it might be broken across two lines.
+If we look in the ASCII interpretation to see if we can recognise the URL requested. We should be able to find **www.targetwebsite.com** in the 6th-7th line (those hex offsets labelled as 0040 - 0070), but it might be broken across two lines.
 
 ![](./images/20.jpg)
 
@@ -284,7 +284,7 @@ Use the Display Filter Expression syntax window to create a display filter to di
 
 Let's **Clear display filter**. 
 
-To access the Display Filter Expression syntax window, we will be selecting Analyze from the Wireshark menu, then select **Display Filter Expression**. 
+To access the Display Filter Expression syntax window, we will be selecting Analyse from the Wireshark menu, then select **Display Filter Expression**. 
 
 ![](./images/38.jpg)
 
@@ -437,7 +437,7 @@ Select the first displayed frame result.
 
 ![](./images/61.jpg)
 
-Select **Analyze** from the menu, then select **Follow**, then select **TCP Stream**. 
+Select **Analyse** from the menu, then select **Follow**, then select **TCP Stream**. 
 
 ![](./images/62.png)
 
@@ -463,7 +463,7 @@ Select the first displayed frame result.
 
 ![](./images/64.png)
 
-Select **Analyze** from the menu, then select **Follow**, then select **HTTP Stream**. 
+Select **Analyse** from the menu, then select **Follow**, then select **HTTP Stream**. 
 
 ![](./images/65.png)
 
