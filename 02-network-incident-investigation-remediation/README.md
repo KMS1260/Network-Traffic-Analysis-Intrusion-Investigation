@@ -19,14 +19,14 @@ Our goal is to investigate, confirm the source and scope of the leak, and contai
 #
 
 - **Support the investigation with data.** We combine packet captures, host logs, and other telemetry to corroborate findings.
-- **Analyze logs against the PCAP.** We hunt for anomalies or suspicious activity that correlates with packet-level evidence.
+- **Analyse logs against the PCAP.** We hunt for anomalies or suspicious activity that correlates with packet-level evidence.
 </details>
 
 <details><summary><stronge>Indicators & Attribution</stronge></summary>
 
 #
 
-- **Analyze indicators of malicious activity.** We extract and evaluate IoCs/behaviors relevant to the scenario.
+- **Analyse indicators of malicious activity.** We extract and evaluate IoCs/behaviors relevant to the scenario.
 - **Identify the nature and scope.** We determine the breach source, affected systems/files, and potential network impact.
 </details>
 
@@ -35,7 +35,7 @@ Our goal is to investigate, confirm the source and scope of the leak, and contai
 #
 
 - **Execute appropriate IR actions.** We contain, eradicate, and recover in line with policy and risk.
-- **Remediate the incident.** We remove anomalous files, adjust permissions to block unauthorized access, and add security controls as needed.
+- **Remediate the incident.** We remove anomalous files, adjust permissions to block unauthorised access, and add security controls as needed.
 - **Apply common security techniques.** We harden computing resources using proven configurations and safeguards.
 - **Enhance enterprise capabilities.** We tune detections, logging, and control coverage to prevent recurrence.
 </details>
@@ -139,11 +139,11 @@ It seems like the attack is occurring from Port 1337 we should note that.
 </details>
 
 <details>
-  <summary>Checking for unauthorized accounts</summary>
+  <summary>Checking for unauthorised accounts</summary>
 
 We will now check for any unauthorised accounts and document any anomalous results  
 
-To check for unauthorized accounts, we will enter net user in cmd
+To check for unauthorised accounts, we will enter net user in cmd
 ```cmd
 net user
 ```
@@ -231,7 +231,7 @@ Let's note down the name of this malicious application: **WinT0ols.exe** (PID 66
 
 #
 
-We will now examine the Windows security logs to determine if any unauthorized local accounts were created in the Windows Server 2019 machine. 
+We will now examine the Windows security logs to determine if any unauthorised local accounts were created in the Windows Server 2019 machine. 
 
 We will use **Event Viewer**. 
 
@@ -448,7 +448,7 @@ Let's keep a note of the malicious file path: **C:\Users\admin\Downloads\dist**
 #
 
 <details>
-  <summary><strong>Mitigating the unauthorized user account</strong></summary>
+  <summary><strong>Mitigating the unauthorised user account</strong></summary>
 
 #
 
@@ -599,7 +599,7 @@ Outbound data exfiltration was traced to a Windows Server 2019 host at **10.10.1
 - **Destination:** 75.30.5.55:1337 (unapproved egress)
 - **Sensitive data:** PII (names, addresses, emails, phone numbers, SSNs) observed in clear text
 - **Malicious process:** `WinT0Ols.exe` (PID **6692**), executed from `C:\\Users\\admin\\Downloads\\dist`
-- **Unauthorized account:** `Adm1nistrator` (created; Event ID **4720**)
+- **Unauthorised account:** `Adm1nistrator` (created; Event ID **4720**)
 - **Business impact:** Customer data leakage associated with subsequent phishing/vishing complaints
 </details>
 
@@ -656,6 +656,6 @@ Outbound data exfiltration was traced to a Windows Server 2019 host at **10.10.1
 | Destination Port | 1337 (TCP) |
 | Malicious Process | `WinT0Ols.exe` (PID 6692) |
 | File Path | `C:\\Users\\admin\\Downloads\\dist` |
-| Unauthorized Account | `Adm1nistrator` |
+| Unauthorised Account | `Adm1nistrator` |
 | Windows Event | 4720 (Account Created) |
 
