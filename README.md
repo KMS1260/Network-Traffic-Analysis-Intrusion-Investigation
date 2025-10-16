@@ -46,5 +46,5 @@ Each project includes:
 ## 📢 Disclaimer
 This repository is for educational purposes only.  
 All activities were performed in a controlled, legal lab environment.  
-Do **not** attempt these techniques on unauthorized systems.
+Do **not** attempt these techniques on unauthorised systems.
 
